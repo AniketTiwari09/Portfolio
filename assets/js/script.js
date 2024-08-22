@@ -60,12 +60,9 @@ document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
             document.title = "Portfolio | Aniket Tiwari";
-            $("#favicon").attr("href", "assets/images/Hero.png");
+            $("").attr("href", "assets/images/Hero.png");
         }
-        // else {
-        //     document.title = "Come Back To Portfolio";
-        //     $("#favicon").attr("href", "assets/images/favhand.png");
-        // }
+
     });
 
 
