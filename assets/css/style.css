@@ -951,7 +951,7 @@ width: 50px;
 /* work section ends */
 
 /* experience section starts */
-.experience .timeline {
+/* .experience .timeline {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
@@ -1128,7 +1128,64 @@ width: 50px;
 }
 .morebtn .btn:hover i {
   transform: translateX(5px);
+} */
+
+/* --- Uniform circular badges for all experience logos --- */
+.experience .content {
+  position: relative;
+  padding-right: 90px; /* space for right corner badge */
 }
+
+/* Generic badge container for all company logos */
+.experience .logo-Saayam-container,
+.experience .logo-AMAT-container,
+.experience .logo-ATD-container,
+.experience .logo-CCI-container,
+.experience .logo-CDAC-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;              /* default: top-right */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #fff;         /* white badge background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 6px;
+  z-index: 2;
+  box-shadow: 0 0 4px rgba(0,0,0,0.2); /* subtle border */
+}
+
+/* Mirror badge placement for left-side timeline cards */
+.experience .left .logo-Saayam-container,
+.experience .left .logo-AMAT-container,
+.experience .left .logo-ATD-container,
+.experience .left .logo-CCI-container,
+.experience .left .logo-CDAC-container {
+  left: 10px;
+  right: auto;
+}
+
+/* Uniform logo sizing inside the circular container */
+.experience .logo-Saayam-container img,
+.experience .logo-AMAT-container img,
+.experience .logo-ATD-container img,
+.experience .logo-CCI-container img,
+.experience .logo-CDAC-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* keeps aspect ratio nicely */
+}
+
+/* --- Cleanup old problematic rules --- */
+/* Delete or comment these old lines if present */
+ /*
+ .experience .logo-ATD-container { left:400px; width:50px; height:50px; }
+ .experience .logo-ATD-container img { width:300%; height:300%; }
+ .experience .logo-CCI-container { left:90%; width:60px; height:60px; }
+*/
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
